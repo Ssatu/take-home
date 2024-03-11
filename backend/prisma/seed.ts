@@ -4,11 +4,13 @@ const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 
 async function importData() {
-  // Clear the table
+  // Clear the tables
   await prisma.staff.deleteMany();
+  await prisma.redemption.deleteMany();
+  await prisma.teams.deleteMany();
 
   // Reading data from id to team mappings
-  const csv = fs.readFileSync('prisma/data/staff-id-to-team-mapping.csv', 'utf8');
+  const csv = fs.readFileSync('prisma/data/staff-id-to-team-mapping-long.csv', 'utf8');
 
   // Parsing the CSV data
   const rows = csv

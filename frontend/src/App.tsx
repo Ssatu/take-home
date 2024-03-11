@@ -71,14 +71,24 @@ function App() {
           setRedeemResult(response.data.message);
           if (response.data.message === "Redemption successful!") {
             setDisableRedeem(false);
+            setRedeemable("");
           } else {
             setDisableRedeem(true);
+            setRedeemable("");
           }
         })
         .catch((e) => {
           console.log(e);
         });
     }
+  };
+
+  const idChangeHandler = (e: React.InputHTMLAttributes<HTMLInputElement>) => {
+    setRedeemable("");
+    setTeamName("");
+    setRedeemResult("");
+    setDisableRedeem(true);
+    setDisableCheckRedeem(true);
   };
 
   return (
@@ -92,6 +102,7 @@ function App() {
               type="text"
               ref={staffIdRef}
               placeholder="Input staff ID here"
+              onChange={(e) => idChangeHandler(e)}
             />
             <div>
               Team :<div>{teamName}</div>

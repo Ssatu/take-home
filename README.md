@@ -42,8 +42,7 @@ The frontend consists of a single page built using React
 
 The application assumes the following:
 
-1. IDs are no longer than 24 characters long (causes issues with Prisma when storing it as primary key)
-2. The user will go through the flow of:
+1. The user will go through the flow of:
    1. Checking ID and retrieving team name → Checking if team is available for redemption → Completing redemption
    2. This is enforced on the frontend by disabling certain buttons
    3. An alternative flow may be that: The user wants to key in the team name directly

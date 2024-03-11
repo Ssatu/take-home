@@ -50,3 +50,5 @@ The application assumes the following:
       1. In this case, a separate input field would have to be created and validation that the team name is correct (incl. a query unto the backend) will have to be done.
 
 ### Video demo
+
+Link[https://youtu.be/EIdDuqQXmB0]

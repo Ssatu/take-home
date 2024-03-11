@@ -1,0 +1,32 @@
+{
+  "dependencies": {
+    "@prisma/client": "^5.10.2",
+    "create-react-app": "^5.0.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.3"
+  },
+  "name": "govtech",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.11.25",
+    "cors": "^2.8.5",
+    "dayjs": "^1.11.10",
+    "prettier": "3.2.5",
+    "prisma": "^5.10.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx ts-node src/server.ts",
+    "migrate": "prisma migrate dev",
+    "seed": "ts-node prisma/seed.ts"
+  },
+  "keywords": [],
+  "author": "Ssatu <69383469+Ssatu@users.noreply.github.com>",
+  "license": "ISC",
+  "description": ""
+}
